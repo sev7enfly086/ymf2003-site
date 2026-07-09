@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMF2003.COM - 部署成功 🚀</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+        }
+        .card {
+            text-align: center;
+            padding: 3rem 2.5rem;
+            background: rgba(255,255,255,0.12);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            max-width: 480px;
+        }
+        .emoji { font-size: 4.5rem; margin-bottom: 1rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
+        p { font-size: 1.05rem; opacity: 0.92; line-height: 1.6; margin: 0.4rem 0; }
+        .badge {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1.2rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .info {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="emoji">🚀</div>
+        <h1>部署成功！</h1>
+        <p>YMF2003.COM 自动部署已上线</p>
+        <p>每次 git push 自动同步到服务器</p>
+        <div class="badge">Caddy + GitHub Actions</div>
+        <div class="info" id="time"></div>
+    </div>
+    <script>
+        document.getElementById('time').textContent = '部署时间：' + new Date().toLocaleString('zh-CN');
+    </script>
+</body>
+</html>
