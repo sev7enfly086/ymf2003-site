@@ -16,6 +16,6 @@ jobs:
 
       - name: 同步到服务器
         run: |
-          rsync -avz --delete `
-            -e "ssh -o StrictHostKeyChecking=no" `
+          rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
             ./ root@${{ secrets.SERVER_HOST }}:/var/www/ymf2003/
