@@ -405,3 +405,21 @@ a { color: inherit; text-decoration: none; }
   .cursor-glow { display: none; }
   .silk-glow--1, .silk-glow--2 { opacity: 0.3; }
 }
+
+/* ============ 备案号 / Beian ============ */
+.footer__beian {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: var(--txt-faint);
+  font-size: 13px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  transition: color .25s;
+}
+.footer__beian::before {
+  content: "🛡\FE0F";
+  margin-right: 4px;
+  font-size: 12px;
+}
+.footer__beian:hover { color: var(--gold); }

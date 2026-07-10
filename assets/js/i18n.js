@@ -71,7 +71,8 @@ const I18N = {
     "contact.cta": "咨询美学顾问",
     "contact.note": "医美内服，只认准纤盈一维萃 · Nutraceuticals for Aesthetics",
     "footer.brand": "纤盈一维萃 Matrix? · VICURA",
-    "footer.copy": "© 2025 纤盈一维萃 Vicura｜(香港)纤盈健康食品有限公司 / 深圳市纤盈健康食品有限公司"
+    "footer.copy": "© 2025 纤盈一维萃 Vicura｜(香港)纤盈健康食品有限公司 / 深圳市纤盈健康食品有限公司",
+    "footer.beian": "粤ICP备2026083513号-1"
   },
   en: {
     "brand.short": "VICURA<span>Matrix?</span>",
@@ -144,7 +145,8 @@ const I18N = {
     "contact.cta": "Consult a consultant",
     "contact.note": "For aesthetic nutraceuticals, choose only VICURA · Nutraceuticals for Aesthetics",
     "footer.brand": "VICURA Matrix? · VICURA",
-    "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd."
+    "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd.",
+    "footer.beian": "粤ICP备2026083513号-1"
   },
   fr: {
     "brand.short": "VICURA<span>Matrix?</span>",
@@ -217,6 +219,7 @@ const I18N = {
     "contact.cta": "Consulter un consultant",
     "contact.note": "Pour la nutraceutique esthétique, choisissez VICURA · Nutraceuticals for Aesthetics",
     "footer.brand": "VICURA Matrix? · VICURA",
-    "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd."
+    "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd.",
+    "footer.beian": "粤ICP备2026083513号-1"
   }
 };
