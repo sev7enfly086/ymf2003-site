@@ -684,3 +684,145 @@ a { color: inherit; text-decoration: none; }
   .bhi { border-right: none; border-bottom: 1px solid var(--panel-brd); }
   .bhi:last-child { border-bottom: none; }
 }
+
+/* ============================================
+   产品大图（.prod-card__image）
+   ============================================ */
+.prod-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #0f1a14 0%, #1a2820 100%);
+  position: relative;
+  border: 1px solid var(--panel-brd);
+}
+.prod-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.prod-card:hover .prod-card__image img {
+  transform: scale(1.05);
+}
+.prod-card--gift .prod-card__image {
+  aspect-ratio: 16 / 9;
+}
+@media (max-width: 520px) {
+  .prod-card__image { aspect-ratio: 16 / 10; }
+  .prod-card--gift .prod-card__image { aspect-ratio: 4 / 3; }
+}
+
+/* ============================================
+   营养素 section 顶部大图（.nutrients__bg）
+   ============================================ */
+.nutrients__bg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 0 auto 56px;
+  background: #0a1410;
+  border: 1px solid var(--panel-brd);
+}
+.nutrients__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.72) saturate(0.85);
+  transition: filter 0.6s ease;
+}
+.nutrients__bg:hover img {
+  filter: brightness(0.85) saturate(1);
+}
+.nutrients__bg-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 32px 40px;
+  background: linear-gradient(180deg, transparent 0%, transparent 50%, rgba(10, 20, 16, 0.75) 100%);
+}
+.nutrients__bg-tag {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  border-left: 2px solid var(--gold);
+  padding-left: 16px;
+}
+@media (max-width: 880px) {
+  .nutrients__bg { aspect-ratio: 16 / 9; }
+  .nutrients__bg-overlay { padding: 24px 28px; }
+  .nutrients__bg-tag { font-size: 18px; }
+}
+@media (max-width: 520px) {
+  .nutrients__bg { aspect-ratio: 4 / 3; margin-bottom: 40px; }
+  .nutrients__bg-overlay { padding: 18px 22px; }
+  .nutrients__bg-tag { font-size: 16px; }
+}
+
+/* ============================================
+   品牌 section 顶部 hero 图（.brand__hero）
+   ============================================ */
+.brand__hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 56px;
+  background: #0a1410;
+  border: 1px solid var(--panel-brd);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+.brand__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.88) saturate(0.95);
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.brand__hero:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.95) saturate(1.05);
+}
+.brand__hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 36px 44px;
+  background: linear-gradient(135deg, rgba(10, 20, 16, 0.4) 0%, transparent 50%, rgba(10, 20, 16, 0.65) 100%);
+}
+.brand__hero-tag {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-align: right;
+  line-height: 1.6;
+}
+@media (max-width: 880px) {
+  .brand__hero { aspect-ratio: 16 / 9; }
+  .brand__hero-overlay { padding: 26px 32px; }
+  .brand__hero-tag { font-size: 15px; }
+}
+@media (max-width: 520px) {
+  .brand__hero { aspect-ratio: 4 / 3; border-radius: 14px; margin-bottom: 40px; }
+  .brand__hero-overlay { padding: 20px 24px; }
+  .brand__hero-tag { font-size: 13px; letter-spacing: 0.12em; }
+}
