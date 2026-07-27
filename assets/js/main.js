@@ -162,4 +162,56 @@
       if (sec) obs.observe(sec);
     });
   })();
+
+  /* ---------- 右侧小圆点导航 / Section nav dots ---------- */
+  (function initSectionNav() {
+    const nav = document.querySelector(".section-nav");
+    if (!nav) return;
+    const dots = nav.querySelectorAll(".section-nav__dot");
+
+    // 首次滚动后才出现
+    let visible = false;
+    function checkVisibility() {
+      const should = window.scrollY > 120;
+      if (should !== visible) {
+        visible = should;
+        nav.classList.toggle("is-visible", visible);
+      }
+    }
+    window.addEventListener("scroll", checkVisibility, { passive: true });
+    checkVisibility();
+
+    // 平滑滚动
+    dots.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        const id = a.getAttribute("href").slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      });
+    });
+
+    // 当前章节高亮
+    const map = {};
+    dots.forEach(function (a) {
+      const id = a.dataset.section;
+      const sec = document.getElementById(id);
+      if (sec) map[id] = a;
+    });
+
+    const obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          dots.forEach(function (d) { d.classList.remove("is-active"); });
+          if (map[e.target.id]) map[e.target.id].classList.add("is-active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(map).forEach(function (id) {
+      const sec = document.getElementById(id);
+      if (sec) obs.observe(sec);
+    });
+  })();
 })();

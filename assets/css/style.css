@@ -825,3 +825,80 @@ a { color: inherit; text-decoration: none; }
   .brand__hero-overlay { padding: 20px 24px; }
   .brand__hero-tag { font-size: 13px; letter-spacing: 0.12em; }
 }
+
+/* ============================================
+   右侧滚动导航条（.section-nav）
+   ============================================ */
+.section { scroll-margin-top: 80px; }
+.section-nav {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 12px;
+  background: rgba(10, 20, 16, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 117, 0.15);
+  border-radius: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.section-nav.is-visible { opacity: 1; pointer-events: auto; }
+.section-nav__dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(236, 228, 208, 0.25);
+  transition: all 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  cursor: pointer;
+}
+.section-nav__dot:hover { background: rgba(201, 168, 117, 0.6); transform: scale(1.3); }
+.section-nav__dot.is-active {
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(201, 168, 117, 0.55);
+  transform: scale(1.4);
+}
+.section-nav__dot.is-active::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: navPulse 2s ease-in-out infinite;
+}
+@keyframes navPulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.6); opacity: 0; }
+}
+.section-nav__label {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  background: rgba(10, 20, 16, 0.92);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+.section-nav__dot:hover .section-nav__label,
+.section-nav__dot.is-active .section-nav__label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+@media (max-width: 880px) { .section-nav { display: none; } }
