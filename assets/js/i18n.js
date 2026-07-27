@@ -121,7 +121,7 @@ const I18N = {
     "secnav.evidence": "循证",
     "secnav.brand": "品牌",
     "secnav.contact": "联系",
-    "footer.brand": "纤盈一维萃 Matrix™ · VICURA",
+    "footer.brand": "纤盈一维萃 Matrix™ · Veltri",
     "footer.copy": "© 2025 纤盈一维萃 VICURA｜(香港)纤盈健康食品有限公司 / 深圳市纤盈健康食品有限公司",
     "footer.beian": "粤ICP备2026083513号-1"
   },
@@ -246,7 +246,7 @@ const I18N = {
     "secnav.evidence": "Evidence",
     "secnav.brand": "Brand",
     "secnav.contact": "Contact",
-    "footer.brand": "VICURA Matrix™ · VICURA",
+    "footer.brand": "VICURA Matrix™ · Veltri",
     "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd.",
     "footer.beian": "粤ICP备2026083513号-1"
   },
@@ -371,7 +371,7 @@ const I18N = {
     "secnav.evidence": "Preuves",
     "secnav.brand": "Marque",
     "secnav.contact": "Contact",
-    "footer.brand": "VICURA Matrix™ · VICURA",
+    "footer.brand": "VICURA Matrix™ · Veltri",
     "footer.copy": "© 2025 Vicura｜(Hong Kong) Vicura Health Food Co., Ltd. / Shenzhen Vicura Health Food Co., Ltd.",
     "footer.beian": "粤ICP备2026083513号-1"
   }
