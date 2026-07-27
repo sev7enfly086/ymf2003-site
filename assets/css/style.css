@@ -232,10 +232,9 @@ a { color: inherit; text-decoration: none; }
 .phase__no { font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-size: 13px; letter-spacing: 3px; color: var(--gold); }
 .phase h4 { font-size: 19px; margin: 10px 0 8px; }
 .phase p { color: var(--txt-dim); font-size: 15px; }
-.product__price { margin-top: 40px; text-align: center; }
-.product__price span { display: block; color: var(--txt-faint); font-size: 13px; letter-spacing: 2px; }
-.product__price strong { font-size: 40px; font-weight: 800; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.product__price em { font-style: normal; font-size: 16px; color: var(--txt-dim); -webkit-text-fill-color: var(--txt-dim); }
+.product__price { margin-top: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.product__price-divider { width: 56px; height: 1px; background: var(--gold); opacity: 0.7; }
+.product__price-note { color: var(--txt-dim); font-size: 14px; letter-spacing: 0.04em; line-height: 1.7; max-width: 560px; margin: 0 auto; font-weight: 400; }
 
 /* ============ EVIDENCE ============ */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 50px; }
